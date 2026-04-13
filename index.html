@@ -1,124 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pjay Vargas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pierce John Vargas</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #020617;
+  color: white;
+}
 
-    header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(10px);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1000;
-    }
+/* NAVBAR */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.4);
+}
 
-    header h2 {
-      color: #22c55e;
-    }
+header h2 {
+  color: #38bdf8;
+}
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    nav a:hover {
-      color: #22c55e;
-    }
+nav a:hover {
+  color: #38bdf8;
+}
 
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent);
+  text-align: center;
+}
 
-    .hero h1 {
-      font-size: 50px;
-    }
+.hero h1 {
+  font-size: 55px;
+}
 
-    .hero span {
-      color: #22c55e;
-    }
+.hero span {
+  color: #38bdf8;
+}
 
-    .hero p {
-      margin-top: 10px;
-      color: #94a3b8;
-    }
+.hero p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
 
-    .btn {
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #22c55e;
-      color: black;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .btn:hover {
-      transform: scale(1.1);
-    }
+.btn:hover {
+  transform: scale(1.1);
+}
 
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
+/* SECTION */
+section {
+  padding: 100px 20px;
+  text-align: center;
+}
 
-    .card {
-      background: #1e293b;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 500px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 500px;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-    }
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* Animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
+  }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 32px;
-      }
+  nav {
+    display: none;
+  }
+}
+</style>
 
-      nav {
-        display: none;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -127,36 +129,50 @@
   <h2>Pjay</h2>
   <nav>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <div class="hero">
   <h1>Hello, I'm <span>Pjay</span></h1>
-  <p>IT Graduate | Trader | Future Marine Reservist</p>
-  <a href="#contact" class="btn">Get in Touch</a>
+  <p>Tech | Life | Adventure | Photography </p>
+  <a href="#about" class="btn">Learn More</a>
 </div>
 
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    <p>I build tools, trade markets, and continuously improve my skills.</p>
+    I am an Information Technology graduate passionate about learning, building, and improving myself every day. I aim to grow both technically and personally while serving with discipline and purpose.
   </div>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="card">Trading Indicators</div>
-  <div class="card">Scripts & Automation</div>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">Web Development (HTML, CSS, JavaScript)</div>
+  <div class="card">Basic Programming & Problem Solving</div>
+  <div class="card">Adaptability & Continuous Learning</div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="card">
-    <p>Email: your@email.com</p>
+    Email: vargaspiercejohn@gmail.com
   </div>
 </section>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < window.innerHeight - 50) {
+      card.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
