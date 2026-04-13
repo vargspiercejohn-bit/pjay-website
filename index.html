@@ -1,67 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pjay Vargas</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pjay Vargas</title>
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
-      text-align: center;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+
+    header h2 {
+      color: #22c55e;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #22c55e;
     }
 
     .hero {
-      padding: 100px 20px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    h1 {
-      font-size: 40px;
+    .hero h1 {
+      font-size: 50px;
     }
 
-    p {
+    .hero span {
+      color: #22c55e;
+    }
+
+    .hero p {
+      margin-top: 10px;
       color: #94a3b8;
     }
 
     .btn {
-      display: inline-block;
-      padding: 10px 20px;
+      margin-top: 20px;
+      padding: 12px 25px;
       background: #22c55e;
       color: black;
-      text-decoration: none;
       border-radius: 5px;
-      margin-top: 20px;
+      text-decoration: none;
+      transition: 0.3s;
     }
 
-    .section {
-      padding: 50px 20px;
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .card {
+      background: #1e293b;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      nav {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="hero">
-    <h1>Pjay Vargas</h1>
-    <p>IT Graduate | Trader | Future Marine Reservist</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </div>
+<header>
+  <h2>Pjay</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>I build tools, trade markets, and improve daily.</p>
-  </div>
+<div class="hero">
+  <h1>Hello, I'm <span>Pjay</span></h1>
+  <p>IT Graduate | Trader | Future Marine Reservist</p>
+  <a href="#contact" class="btn">Get in Touch</a>
+</div>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <p>Coming soon...</p>
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I build tools, trade markets, and continuously improve my skills.</p>
   </div>
+</section>
 
-  <div class="section" id="contact">
-    <h2>Contact</h2>
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card">Trading Indicators</div>
+  <div class="card">Scripts & Automation</div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
     <p>Email: your@email.com</p>
   </div>
+</section>
 
 </body>
 </html>
